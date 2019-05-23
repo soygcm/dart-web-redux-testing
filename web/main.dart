@@ -1,15 +1,9 @@
 import 'package:redux/redux.dart';
+import "package:salud_a_un_cilc/core/store.dart";
 import 'dart:html';
 import 'dart:async';
-import 'core.dart';
 
 main() {
-  // Create the store with our Reducer and Middleware
-  final store = new Store<int>(
-    counterReducer,
-    initialState: 0,
-    middleware: [loggingMiddleware],
-  );
 
   // Render our State right away
   render(store.state);
